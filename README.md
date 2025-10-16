@@ -94,7 +94,6 @@ routes:
 - 主题系统使用指南：[docs/theme-usage-guide.md](docs/theme-usage-guide.md)
 - 图标系统使用指南：[docs/icon-system-guide.md](docs/icon-system-guide.md)
 - 路由配置指南：[docs/routes-config-guide.md](docs/routes-config-guide.md)
-- 核心模块说明：[src/core/core-module-guide.md](src/core/core-module-guide.md)
 
 ## TodoList
 - [ ] 主题系统增加调色板，方便增加、切换主题
