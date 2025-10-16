@@ -1,0 +1,67 @@
+# 路由配置文件，配置驱动的路由定义，支持自动菜单生成
+# 当不需要分组时，children可以不配置
+# 示例格式:
+# - route: "路由名称"
+#   component: "组件路径"
+#   meta:
+#     title: "显示标题"
+#     icon: "图标名称"
+#     order: 排序号
+#   children:
+#     - route: "子路由名称"
+#       component: "子组件路径" 
+#       meta:
+#         title: "子路由标题"
+#         order: 子路由排序号
+
+# 路由配置
+routes:
+  # 首页模块
+  - route: "home"
+    component: "@/views/defaultpage/HomePage.vue"
+    meta:
+      title: "首页"
+      icon: "Home"
+      order: 0
+
+  # 目录页
+  - route: "contents"
+    component: "@/views/defaultpage/TableOfContentsPage.vue"
+    meta:
+      title: "目录"
+      icon: "List"
+      order: 1
+
+  # 功能展示模块
+  - route: "feature-showcase"
+    component: "@/views/feature-showcase/Index.vue"
+    meta:
+      title: "功能展示"
+      icon: "Grid3x3"
+      order: 2
+    children:
+      - route: "theme-showcase"
+        component: "@/views/feature-showcase/ThemeShowcase.vue"
+        meta:
+          title: "主题展示"
+          icon: "Palette"
+          order: 1
+      - route: "mermaid-showcase"
+        component: "@/views/feature-showcase/MermaidShowcase.vue"
+        meta:
+          title: "Mermaid图表"
+          icon: "BarChart3"
+          order: 2
+      - route: "drawio-chart-showcase"
+        component: "@/views/feature-showcase/DrawioChartShowcase.vue"
+        meta:
+          title: "Draw.io图表"
+          icon: "FileImage"
+          order: 4
+  # 末页模块
+  - route: "endpage"
+    component: "@/views/defaultpage/EndPage.vue"
+    meta:
+      title: "末页"
+      icon: "Send"
+      order: 100

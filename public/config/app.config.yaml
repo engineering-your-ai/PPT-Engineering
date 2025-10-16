@@ -1,0 +1,14 @@
+# 应用配置文件
+# 统一管理应用的基础配置信息
+
+# 应用基本信息
+app:
+  icon: "Presentation"
+  title: "PPT-Engineering"
+  version: "1.0.0"
+  baseUrl: "/PPT-Engineering/"
+  
+  # 功能特性开关
+  features:
+    # 是否显示PDF导出按钮
+    showPdfExportButton: true

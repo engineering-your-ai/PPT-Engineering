@@ -1,0 +1,103 @@
+# 主题配色方案配置文件
+themes:
+  # "white" 是这个主题的唯一标识符（Key），用于程序调用
+  blue:
+    # --- 基础信息 ---
+    name: "白底蓝色" # 主题的显示名称，将会在UI界面上展示给用户
+    description: "白底蓝色主题，简约经典" # 对主题风格的简短描述
+    logo: "/img/logo/ppt-e.png" # 与此主题搭配的Logo图片路径
+    invertLogo: "/img/logo/ppt-e-white.png" # 反色Logo图片路径，用于在深色背景下显示
+
+    # --- 调色板 (Palette) ---
+    # 定义了主题中所有会用到的颜色
+    palette:
+      text:
+        primary: "#0D286A" # 主色调：用于最重要的元素，如主按钮、高亮状态等
+        secondary: "#1D5297" # 辅助色：用于次要但需要突出的元素，与主色形补充
+        invert: "#ffffff" # 反色
+
+      # 背景色组
+      background:
+        default: "#ffffff" # 默认背景色：页面的最底层基础背景
+        invert: "#0D286A" # 反色背景
+
+      # 边框色组
+      border:
+        default: "#e5e7eb" # 默认边框色：用于卡片、容器等元素的通用边框
+        subtle: "#d1d5db" # 弱化边框色：用于输入框、分隔线等需要更细微边界的场景
+
+
+      # 链接色组
+      link:
+        default: "#3b82f6" # 默认链接色
+        hover: "#2563eb" # 鼠标悬浮（Hover）时的链接色
+        visited: "#7c3aed" # 用户已访问过（Visited）的链接色
+
+      # 强调色板（数组）
+      # 用于图表（如饼图、柱状图）的一组预设颜色，确保数据可视化色彩和谐
+      accent:
+        - "#0D286A" # 强调色 1
+        - "#260E6D" # 强调色 2
+        - "#9E8403" # 强调色 3
+        - "#9E6B03" # 强调色 4
+        - "#A110AB" # 强调色 5
+        - "#C5003C" # 强调色 6
+
+    # --- 字体排印 (Typography) ---
+    # 定义了主题中所有的字体相关属性
+    typography:
+      # 标题字体：选用 Google Fonts 的开源字体 Noto Sans SC (思源黑体)，对中英文及多语言支持良好
+      headingfont: "Noto Sans SC"
+      # 正文字体：同样选用 Noto Sans SC，以保证整个PPT的视觉风格统一
+      bodyfont: "Noto Sans SC"
+      # 等宽字体：选用流行的开源编程字体 Fira Code，特点是包含连字特性，适合展示代码
+      codefont: "Fira Code"
+      # 基础字号：作为整个应用字体大小的计算基准
+      baseFontSize: "16px"
+
+      
+  # 深色商务主题 - 深邃黑色背景，商务专业风格
+  darkBlue:
+    name: "深邃背景"
+    description: "黑底白字，专业风格"
+    logo: "/img/logo/ppt-e-white.png"
+    invertLogo: "/img/logo/ppt-e.png" # 反色Logo图片路径，用于在浅色背景下显示
+    
+    palette:
+      text:
+        primary: "#F4F4F4" # 主要文本颜色改为白色，以便于在深色背景上阅读
+        secondary: "#9ca3af" # 辅助色使用较淡的灰色，以区分主要文本
+        invert: "#1f2937" # 原来的primary颜色作为反色，可用于浅色背景上的文本
+
+      background:
+        default: "#1f2937" # 保持原深邃的背景色
+        invert: "#F4F4F4" # 提高反色背景亮度，增加视觉层次
+        
+      border:
+        default: "#6b7280" # 稍微加深边框色，以获得更好的视觉分离效果
+        subtle: "#4b5563" # 使用与反色背景相同的颜色，保持一致性
+        
+      link:
+        default: "#60a5fa" # 默认链接色更改为一个明亮的蓝色，易于识别
+        hover: "#3b82f6" # 鼠标悬停时变亮，提供清晰反馈
+        visited: "#a78bfa" # 访问后颜色变化，不跳脱整体色调
+        
+      accent:
+        - "#6366f1" # 强调色1，一种明亮且对比度高的蓝色
+        - "#f87171" # 强调色2，红色，为设计添加活力但不过分突出
+        - "#fbbf24" # 强调色3，黄色，增加温暖感同时保证可读性
+        - "#34d399" # 强调色4，绿色，清新且引人注目
+        - "#a78bfa" # 强调色5，紫色，柔和而独特
+        - "#facc15" # 强调色6，另一种黄色，但更为明亮，确保足够的对比度
+        
+    typography:
+      headingfont: "Noto Sans SC"
+      bodyfont: "Noto Sans SC"
+      codefont: "Fira Code"
+      baseFontSize: "16px"
+      
+
+# 默认主题配置
+default:
+  # 应用启动时使用的默认主题
+  theme: "blue"

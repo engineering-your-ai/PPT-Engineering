@@ -1,0 +1,166 @@
+# 图标系统配置文件
+# 统一管理 Lucide 图标和静态图标的配置
+
+# Lucide 图标配置 - 按分类组织
+lucide_icons:
+  # 导航相关图标
+  navigation:
+    - Menu
+    - X
+    - ChevronLeft
+    - ChevronDown
+    - ChevronRight
+    - List
+    - ArrowRight
+    - Grid3x3
+  # 基础图标
+  basic:
+    - Home
+    - BarChart3
+    - Package
+    - Layout
+    - FileText
+    - Monitor
+    - ShoppingBag
+    - Info
+    - Square
+    - Zap
+    - BookOpen
+    - Settings
+    - Bug
+    - Turtle
+    - XCircle
+    - Sidebar
+    - Send
+    - Cpu
+    - Warehouse
+    - Radio
+    - Cable
+    - Scan
+    - ClipboardList
+    - Bluetooth
+    - Building
+    - Car
+    - UserCheck
+    - Building2
+    - CheckCircle
+    - AlertTriangle
+    - UserX
+    - SearchX
+    - Target
+    - Smartphone
+    - Shield
+    - Package2
+    - Unlink
+    - Network
+    - Quote
+    - DollarSign
+    - AlertCircle
+    - Paintbrush
+    - Palette
+    - Type
+    - FileImage
+  # 用户和数据
+  user_data:
+    - Users
+    - Database
+    - Globe
+    - Code
+    - Layers
+    - Activity
+    - Briefcase
+
+  # 时间和日期
+  time:
+    - Calendar
+    - Clock
+
+  # 文件操作
+  file_ops:
+    - Download
+    - Edit
+    - Eye
+    - Filter
+    - Grid
+    - Hash
+    - Image
+    - Link
+    - Lock
+    - Upload
+    - Trash
+   
+  #品牌图标
+  brand:
+    - Github
+  # 通信
+  communication:
+    - Mail
+    - MapPin
+    - Phone
+
+  # 搜索和标记
+  search:
+    - Search
+    - Star
+    - Tag
+
+  # 媒体
+  media:
+    - User
+    - Video
+    - Wifi
+
+  # 工具
+  tools:
+    - Wrench
+    - Brain
+    - MousePointer
+    - Bot
+    - Hammer
+    - Lightbulb
+    - Crown
+
+  # 趋势和版本
+  trend:
+    - TrendingUp
+    - GitBranch
+    - Presentation
+
+  # 窗口控制
+  window:
+    - Maximize2
+    - Minimize2
+    - FileDown
+
+# 静态图标配置 - 按分类组织
+static_icons:
+  # Logo 图标
+  logo:
+    - name: ppe-engineering-logo
+      src: /img/logo/ppe-e.png
+    - name: zkml-logo
+      src: /img/logo/zkml.png
+    - name: zkml-logo-white
+      src: /img/logo/zkml-white.png
+
+  # 自定义图标
+  custom:
+    - name: c-bell
+      src: /img/icon/bell.svg
+    - name: c-mail
+      src: /img/icon/mail.svg
+    - name: c-user
+      src: /img/icon/user.svg
+
+# 图标系统配置
+config:
+  # 默认图标大小
+  default_size: 20
+  # 默认线条宽度（Lucide图标）
+  default_stroke_width: 2
+  # 是否启用图标缓存
+  enable_cache: true
+  # 图标加载失败时的回退行为
+  fallback_behavior: "show_placeholder"
+  # 占位符文本
+  placeholder_text: "?"
