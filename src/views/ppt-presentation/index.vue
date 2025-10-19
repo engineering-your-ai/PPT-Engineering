@@ -52,7 +52,7 @@
                     <h4 v-if="section.title" class="font-heading text-lg font-semibold text-primary mb-2">{{ section.title }}</h4>
                     
                     <!-- 列表内容 -->
-                    <ul v-if="section.items" class="space-y-2 mb-4">
+                    <ul v-if="'items' in section && section.items" class="space-y-2 mb-4">
                       <li v-for="(item, itemIndex) in section.items" :key="itemIndex" class="flex items-start">
                         <Icon name="CheckCircle" :size="16" color="text-accent2" class="mt-0.5 mr-2 flex-shrink-0" />
                         <span class="font-body text-sm text-secondary">{{ item }}</span>
@@ -60,15 +60,15 @@
                     </ul>
                     
                     <!-- 普通文本内容 -->
-                    <p v-if="section.text" class="font-body text-sm text-secondary mb-4">{{ section.text }}</p>
+                    <p v-if="'text' in section && section.text" class="font-body text-sm text-secondary mb-4">{{ section.text }}</p>
                     
                     <!-- 代码块 -->
-                    <div v-if="section.code" class="bg-background border border-border-default rounded p-3 mb-4 overflow-x-auto">
+                    <div v-if="'code' in section && section.code" class="bg-background border border-border-default rounded p-3 mb-4 overflow-x-auto">
                       <pre class="font-mono text-xs text-secondary whitespace-pre-wrap">{{ section.code }}</pre>
                     </div>
                     
                     <!-- 嵌套列表 -->
-                    <div v-if="section.nestedItems" class="ml-4 mb-4">
+                    <div v-if="'nestedItems' in section && section.nestedItems" class="ml-4 mb-4">
                       <div v-for="(nestedItem, nestedIndex) in section.nestedItems" :key="nestedIndex" class="mb-3">
                         <h5 v-if="nestedItem.title" class="font-heading text-base font-medium text-primary mb-2">{{ nestedItem.title }}</h5>
                         <ul v-if="nestedItem.items" class="space-y-1">
@@ -99,6 +99,32 @@ defineOptions({
   name: 'PptPresentationIndex'
 })
 
+/**
+ * 嵌套项目接口
+ */
+interface NestedItem {
+  title: string
+  items: string[]
+}
+
+/**
+ * 内容区块接口 - 联合类型
+ */
+type ContentSection = 
+  | { title: string; text: string }
+  | { title: string; items: string[] }
+  | { title: string; code: string }
+  | { title: string; nestedItems: NestedItem[] }
+
+/**
+ * 页面接口
+ */
+interface Page {
+  title: string
+  layout?: string[]
+  content?: ContentSection[]
+}
+
 // 弹窗控制
 const isModalOpen = ref(false)
 
@@ -113,7 +139,7 @@ const closeModal = () => {
 }
 
 // 页面数据
-const pages = [
+const pages: Page[] = [
   {
     title: "第1页：项目概述",
     layout: [
