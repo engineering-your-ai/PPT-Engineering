@@ -24,6 +24,8 @@
        - `MermaidChart.vue`：用于渲染mermaid图表
        - `DrawioChart.vue`：用于渲染drawio图表
        - `Icon.vue`：用于渲染图标
+    - **3.3 静态资源**  
+     静态资源（如图片、图标等）放在 `public` 目录下，注意引用时需要import { resolveResourcePath } from '@/core/utils/path' 处理路径。
 
 4. **配置路由**  
    在 `routes.config.yaml` 中添加对应路由。

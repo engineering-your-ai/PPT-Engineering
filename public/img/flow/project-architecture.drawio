@@ -1,0 +1,145 @@
+<mxfile host="65bd71144e">
+    <diagram id="ppt-engineering-architecture-v2" name="PPT-Engineering架构-优化版">
+        <mxGraphModel dx="2355" dy="1058" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1050" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="6" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="100" y="80" width="1270" height="980" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer1-container" value="技术栈" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e3f2fd;strokeColor=#1976d2;strokeWidth=2;verticalAlign=top;align=center;fontSize=16;fontStyle=1;spacingTop=6;container=1;" parent="6" vertex="1">
+                    <mxGeometry width="1270" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="vue3" value="Vue 3" style="rounded=1;fillColor=#e8f5e9;strokeColor=#2e7d32;whiteSpace=wrap;" parent="layer1-container" vertex="1">
+                    <mxGeometry x="63.49999999999999" y="50" width="126.99999999999999" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="typescript" value="TypeScript 5" style="rounded=1;fillColor=#e8f5e9;strokeColor=#2e7d32;whiteSpace=wrap;" parent="layer1-container" vertex="1">
+                    <mxGeometry x="253.99999999999997" y="50" width="165.1" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="vite" value="Vite 5" style="rounded=1;fillColor=#e8f5e9;strokeColor=#2e7d32;whiteSpace=wrap;" parent="layer1-container" vertex="1">
+                    <mxGeometry x="482.5999999999999" y="50" width="126.99999999999999" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="vue-router" value="Vue Router 4" style="rounded=1;fillColor=#e8f5e9;strokeColor=#2e7d32;whiteSpace=wrap;" parent="layer1-container" vertex="1">
+                    <mxGeometry x="673.1" y="50" width="165.1" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="tailwind" value="Tailwind CSS 3" style="rounded=1;fillColor=#e8f5e9;strokeColor=#2e7d32;whiteSpace=wrap;" parent="layer1-container" vertex="1">
+                    <mxGeometry x="901.6999999999998" y="50" width="165.1" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="lucide" value="Lucide Icons" style="rounded=1;fillColor=#e8f5e9;strokeColor=#2e7d32;whiteSpace=wrap;" parent="layer1-container" vertex="1">
+                    <mxGeometry x="1092.2" y="50" width="165.1" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer2-container" value="配置驱动层" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;strokeColor=#f57c00;strokeWidth=2;verticalAlign=top;align=center;fontSize=16;fontStyle=1;spacingTop=6;container=1;" parent="6" vertex="1">
+                    <mxGeometry y="120" width="1270" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="" style="group" vertex="1" connectable="0" parent="layer2-container">
+                    <mxGeometry x="50.8" y="50" width="1143" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="routes-config" value="routes.config.yaml\n路由配置" style="rounded=1;fillColor=#ffecb3;strokeColor=#ff8f00;whiteSpace=wrap;" parent="2" vertex="1">
+                    <mxGeometry width="216.2432432432432" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="themes-config" value="themes.config.yaml\n主题配置" style="rounded=1;fillColor=#ffecb3;strokeColor=#ff8f00;whiteSpace=wrap;" parent="2" vertex="1">
+                    <mxGeometry x="308.91891891891885" width="216.2432432432432" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="icons-config" value="icons.config.yaml\n图标配置" style="rounded=1;fillColor=#ffecb3;strokeColor=#ff8f00;whiteSpace=wrap;" parent="2" vertex="1">
+                    <mxGeometry x="617.8378378378377" width="216.2432432432432" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="app-config" value="app.config.yaml\n应用配置" style="rounded=1;fillColor=#ffecb3;strokeColor=#ff8f00;whiteSpace=wrap;" parent="2" vertex="1">
+                    <mxGeometry x="926.7567567567567" width="216.2432432432432" height="50" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer3-container" value="核心层 (src/core)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#7b1fa2;strokeWidth=2;verticalAlign=top;align=center;fontSize=16;fontStyle=1;spacingTop=6;container=1;" parent="6" vertex="1">
+                    <mxGeometry y="260" width="1270" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="" style="group" vertex="1" connectable="0" parent="layer3-container">
+                    <mxGeometry x="25.4" y="60" width="1231.8999999999999" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="router" value="router&#10;路由管理" style="rounded=1;fillColor=#e1bee7;strokeColor=#8e24aa;whiteSpace=wrap;" parent="3" vertex="1">
+                    <mxGeometry width="191.62888888888884" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="services" value="services&#10;PDF导出服务&#10;页面捕获服务" style="rounded=1;fillColor=#e1bee7;strokeColor=#8e24aa;whiteSpace=wrap;" parent="3" vertex="1">
+                    <mxGeometry x="260.0677777777777" width="191.62888888888884" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="composables" value="composables/组合式API&#10;主题、图标、菜单" style="rounded=1;fillColor=#e1bee7;strokeColor=#8e24aa;whiteSpace=wrap;" parent="3" vertex="1">
+                    <mxGeometry x="520.1355555555554" width="191.62888888888884" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="utils" value="utils/工具函数&#10;配置解析、路由生成" style="rounded=1;fillColor=#e1bee7;strokeColor=#8e24aa;whiteSpace=wrap;" parent="3" vertex="1">
+                    <mxGeometry x="780.203333333333" width="191.62888888888884" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="types" value="types/TypeScript类型&#10;全局类型定义" style="rounded=1;fillColor=#e1bee7;strokeColor=#8e24aa;whiteSpace=wrap;" parent="3" vertex="1">
+                    <mxGeometry x="1040.2711111111107" width="191.62888888888884" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer4-container" value="组件层 (src/components)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e9;strokeColor=#388e3c;strokeWidth=2;verticalAlign=top;align=center;fontSize=16;fontStyle=1;spacingTop=6;container=1;" parent="6" vertex="1">
+                    <mxGeometry y="420" width="1270" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="layout-components" value="layout/布局组件&#10;页面容器、内容组件" style="rounded=1;fillColor=#c8e6c9;strokeColor=#4caf50;whiteSpace=wrap;" parent="layer4-container" vertex="1">
+                    <mxGeometry x="355.59999999999997" y="50" width="203.2" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="common-components" value="common/通用组件&#10;Icon、Header、Footer&#10;Drawio、Mermaid查看器" style="rounded=1;fillColor=#c8e6c9;strokeColor=#4caf50;whiteSpace=wrap;" parent="layer4-container" vertex="1">
+                    <mxGeometry x="673.1" y="50" width="203.2" height="70" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer5-container" value="布局层 (src/layouts)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2f1;strokeColor=#00695c;strokeWidth=2;verticalAlign=top;align=center;fontSize=16;fontStyle=1;spacingTop=6;container=1;" parent="6" vertex="1">
+                    <mxGeometry y="580" width="1270" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="responsive-layout" value="ResponsiveLayout&#10;响应式布局" style="rounded=1;fillColor=#b2dfdb;strokeColor=#00796b;whiteSpace=wrap;" parent="layer5-container" vertex="1">
+                    <mxGeometry x="76.2" y="40" width="203.2" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="nested-layout" value="NestedLayout&#10;嵌套布局" style="rounded=1;fillColor=#b2dfdb;strokeColor=#00796b;whiteSpace=wrap;" parent="layer5-container" vertex="1">
+                    <mxGeometry x="317.5" y="40" width="203.2" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="pdf-dialog" value="PDFExportDialog&#10;PDF导出对话框" style="rounded=1;fillColor=#b2dfdb;strokeColor=#00796b;whiteSpace=wrap;" parent="layer5-container" vertex="1">
+                    <mxGeometry x="558.8" y="40" width="203.2" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="settings-modal" value="SettingsModal&#10;设置模态框" style="rounded=1;fillColor=#b2dfdb;strokeColor=#00796b;whiteSpace=wrap;" parent="layer5-container" vertex="1">
+                    <mxGeometry x="800.1" y="40" width="203.2" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="sidebar" value="ResponsiveSidebar&#10;响应式侧边栏" style="rounded=1;fillColor=#b2dfdb;strokeColor=#00796b;whiteSpace=wrap;" parent="layer5-container" vertex="1">
+                    <mxGeometry x="1041.3999999999999" y="40" width="203.2" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer6-container" value="页面层 (src/views)" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;strokeColor=#c2185b;strokeWidth=2;verticalAlign=top;align=center;fontSize=16;fontStyle=1;spacingTop=6;container=1;" parent="6" vertex="1">
+                    <mxGeometry y="720" width="1270" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="group" vertex="1" connectable="0" parent="layer6-container">
+                    <mxGeometry x="171.45" y="60" width="901.6999999999998" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="default-pages" value="defaultpage&#10;默认页面&#10;首页、目录页、结束页" style="rounded=1;fillColor=#f8bbd9;strokeColor=#e91e63;whiteSpace=wrap;" parent="4" vertex="1">
+                    <mxGeometry width="412.20571428571424" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="feature-showcase" value="custompage&#10;自定义布局页面&#10;支持多种组件、布局方式" style="rounded=1;fillColor=#f8bbd9;strokeColor=#e91e63;whiteSpace=wrap;" parent="4" vertex="1">
+                    <mxGeometry x="489.49428571428564" width="412.20571428571424" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="layer7-container" value="入口文件" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffebee;strokeColor=#d32f2f;strokeWidth=2;verticalAlign=top;align=center;fontSize=16;fontStyle=1;spacingTop=6;container=1;" parent="6" vertex="1">
+                    <mxGeometry y="880" width="1270" height="100" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="group" vertex="1" connectable="0" parent="layer7-container">
+                    <mxGeometry x="406.4" y="50" width="457.19999999999993" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="main-ts" value="main.ts&#10;应用入口" style="rounded=1;fillColor=#ffcdd2;strokeColor=#f44336;whiteSpace=wrap;" parent="5" vertex="1">
+                    <mxGeometry width="203.2" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="app-vue" value="App.vue&#10;根组件" style="rounded=1;fillColor=#ffcdd2;strokeColor=#f44336;whiteSpace=wrap;" parent="5" vertex="1">
+                    <mxGeometry x="253.99999999999997" width="203.2" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeWidth=2;" parent="6" source="layer1-container" target="layer2-container" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeWidth=2;" parent="6" source="layer2-container" target="layer3-container" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeWidth=2;" parent="6" source="layer3-container" target="layer4-container" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeWidth=2;" parent="6" source="layer4-container" target="layer5-container" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeWidth=2;" parent="6" source="layer5-container" target="layer6-container" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="conn6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=classic;endFill=1;strokeWidth=2;" parent="6" source="layer6-container" target="layer7-container" edge="1">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="&lt;font color=&quot;#ff6666&quot; style=&quot;font-size: 72px;&quot;&gt;Drawio文件 AI绘制+手动调整&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;rotation=0;" vertex="1" parent="1">
+                    <mxGeometry x="230" y="1090" width="950" height="100" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

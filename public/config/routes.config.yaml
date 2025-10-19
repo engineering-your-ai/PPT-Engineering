@@ -58,6 +58,102 @@ routes:
           title: "Draw.io图表"
           icon: "FileImage"
           order: 4
+  # PPT演示模块
+  - route: "generate-effect"
+    component: "@/views/ppt-presentation/index.vue"
+    meta:
+      title: "自动生成效果"
+      icon: "Presentation"
+      order: 3
+    children:
+      - route: "project-overview"
+        component: "@/views/ppt-presentation/ProjectOverview.vue"
+        meta:
+          title: "项目概述"
+          icon: "Info"
+          order: 1
+      - route: "design-philosophy"
+        component: "@/views/ppt-presentation/DesignPhilosophy.vue"
+        meta:
+          title: "设计理念"
+          icon: "Lightbulb"
+          order: 2
+      - route: "technical-architecture"
+        component: "@/views/ppt-presentation/TechnicalArchitecture.vue"
+        meta:
+          title: "技术架构"
+          icon: "Code"
+          order: 3
+      - route: "core-features"
+        component: "@/views/ppt-presentation/CoreFeatures.vue"
+        meta:
+          title: "核心功能"
+          icon: "Zap"
+          order: 4
+      - route: "configuration-system"
+        component: "@/views/ppt-presentation/ConfigurationSystem.vue"
+        meta:
+          title: "配置系统"
+          icon: "Settings"
+          order: 5
+      - route: "page-creation-process"
+        component: "@/views/ppt-presentation/PageCreationProcess.vue"
+        meta:
+          title: "页面创建流程"
+          icon: "FilePlus"
+          order: 6
+      - route: "theme-system"
+        component: "@/views/ppt-presentation/ThemeSystem.vue"
+        meta:
+          title: "主题系统"
+          icon: "Palette"
+          order: 7
+      - route: "deployment-guide"
+        component: "@/views/ppt-presentation/DeploymentGuide.vue"
+        meta:
+          title: "部署指南"
+          icon: "Cloud"
+          order: 8
+      - route: "future-plans"
+        component: "@/views/ppt-presentation/FuturePlans.vue"
+        meta:
+          title: "未来规划"
+          icon: "Target"
+          order: 9
+      - route: "summary"
+        component: "@/views/ppt-presentation/Summary.vue"
+        meta:
+          title: "总结"
+          icon: "CheckCircle"
+          order: 10
+
+  # 多轮对话调整模块
+  - route: "multi-round-dialog"
+    component: "@/views/multi-round-dialog/CoverPage.vue"
+    meta:
+      title: "多轮对话调整"
+      icon: "MessageSquare"
+      order: 4
+    children:
+      - route: "design-philosophy"
+        component: "@/views/multi-round-dialog/DesignPhilosophy.vue"
+        meta:
+          title: "设计理念"
+          icon: "Lightbulb"
+          order: 1
+      - route: "project-architecture"
+        component: "@/views/multi-round-dialog/ProjectArchitecture.vue"
+        meta:
+          title: "项目架构"
+          icon: "Layout"
+          order: 2
+      - route: "dialog-screenshots"
+        component: "@/views/multi-round-dialog/DialogScreenshots.vue"
+        meta:
+          title: "对话截图展示"
+          icon: "Image"
+          order: 3
+
   # 末页模块
   - route: "endpage"
     component: "@/views/defaultpage/EndPage.vue"

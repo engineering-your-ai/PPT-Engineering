@@ -175,25 +175,42 @@ function dynamicImport(componentPath: string): () => Promise<any> {
       // 通过路径模式匹配来支持任意组件路径
       const modules = import.meta.glob('@/views/**/*.vue')
       
+      // 调试：打印所有可用的模块键
+
+      
       // 规范化组件路径
       const normalizedPath = componentPath.startsWith('@/') ? componentPath : `@/${componentPath}`
       
       // 在所有可用的模块中查找匹配的路径
       let moduleLoader = modules[normalizedPath]
       
+      
       // 如果直接匹配失败，尝试路径变换匹配
       if (!moduleLoader) {
         // 检查是否需要进行路径转换 (@/ -> /src/)
         const moduleKeys = Object.keys(modules)
-        // console.warn(`组件路径 "${componentPath}" 未找到。可用的组件路径:`, moduleKeys)
+        // console.warn(`组件路径 "${componentPath}" 未找到。规范化路径: "${normalizedPath}"`)
+        // console.warn('可用的组件路径:', moduleKeys)
         
-        // 尝试根据文件名进行匹配
-        const fileName = normalizedPath.split('/').pop() // 获取文件名
-        const matchingKey = moduleKeys.find(key => key.endsWith(fileName || ''))
-        
-        if (matchingKey) {
-          moduleLoader = modules[matchingKey]
-          // console.log(`通过文件名匹配找到组件: ${matchingKey}`)
+        // 尝试将 @/ 转换为 /src/ 进行匹配
+        const srcPath = normalizedPath.replace('@/', '/src/')
+        // console.log('尝试转换为src路径:', srcPath)
+        // 如果 src 路径  匹配成功，直接返回
+        if (modules[srcPath]) {
+          moduleLoader = modules[srcPath]
+          // console.log(`src路径匹配成功: ${srcPath}`)
+        } else {
+          // 尝试根据文件名进行精确匹配
+          const fileName = normalizedPath.split('/').pop() // 获取文件名
+          const matchingKey = moduleKeys.find(key => {
+            const keyFileName = key.split('/').pop()
+            return keyFileName === fileName
+          })
+          
+          if (matchingKey) {
+            moduleLoader = modules[matchingKey]
+            console.log(`通过文件名匹配找到组件: ${matchingKey}`)
+          }
         }
       }
       

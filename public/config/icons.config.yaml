@@ -60,6 +60,7 @@ lucide_icons:
     - Palette
     - Type
     - FileImage
+    - Compass
   # 用户和数据
   user_data:
     - Users
@@ -97,6 +98,7 @@ lucide_icons:
     - Mail
     - MapPin
     - Phone
+    - MessageSquare
 
   # 搜索和标记
   search:
@@ -119,6 +121,8 @@ lucide_icons:
     - Hammer
     - Lightbulb
     - Crown
+    - Architecture
+    - Box
 
   # 趋势和版本
   trend:
