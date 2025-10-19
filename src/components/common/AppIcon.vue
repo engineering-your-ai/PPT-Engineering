@@ -17,7 +17,7 @@
       :is="iconComponent"
       :size="props.size"
       :stroke-width="props.strokeWidth"
-      :color="props.color"
+      :color="resolvedColor"
     />
     
     <!-- 静态图标 -->
@@ -50,13 +50,20 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { useIcon } from '@/core/composables/useIcon'
+import { resolveColor, isThemeColor } from '@/core/utils/colorResolver'
 
 interface Props {
   /** 图标名称 */
   name?: string
   /** 图标大小 */
   size?: string | number
-  /** 图标颜色 */
+  /** 
+   * 图标颜色
+   * 支持以下格式：
+   * - 直接颜色值：#ff0000, rgb(255,0,0), rgba(255,0,0,0.5)
+   * - 主题颜色类：primary, secondary, accent1, accent2-500 等
+   * - CSS 变量：var(--custom-color)
+   */
   color?: string
   /** 是否禁用 */
   disabled?: boolean
@@ -92,11 +99,19 @@ const iconSize = computed(() => {
   return typeof size === 'number' ? `${size}px` : size
 })
 
+// 计算解析后的颜色值
+const resolvedColor = computed(() => {
+  if (!props.color) return undefined
+  
+  // 使用颜色解析工具解析颜色
+  return resolveColor(props.color)
+})
+
 // 计算图标样式
 const iconStyle = computed(() => ({
   width: iconSize.value,
   height: iconSize.value,
-  color: props.color,
+  color: resolvedColor.value,
   opacity: props.disabled ? 0.5 : 1
 }))
 

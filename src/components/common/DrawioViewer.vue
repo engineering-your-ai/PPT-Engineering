@@ -107,6 +107,26 @@ const containerStyle = computed(() => ({
 }))
 
 /**
+ * 预处理 Draw.io XML 内容
+ * 确保 XML 格式符合 GraphViewer 的要求
+ */
+const preprocessDrawioXml = (xmlContent: string): string => {
+  let processedXml = xmlContent.trim()
+  
+  // 如果没有 XML 声明头，添加一个
+  if (!processedXml.startsWith('<?xml')) {
+    processedXml = '<?xml version="1.0" encoding="UTF-8"?>\n' + processedXml
+  }
+  
+  // 确保根元素是 mxfile
+  if (!processedXml.includes('<mxfile')) {
+    throw new Error('不是有效的 Draw.io 文件')
+  }
+    
+  return processedXml
+}
+
+/**
  * 处理图片路径
  */
 const processImagePath = (src: string): string => {
@@ -208,7 +228,10 @@ const loadDiagram = async (src: string) => {
       throw new Error(`Failed to load diagram: ${response.status} ${response.statusText}`)
     }
 
-    const xml = await response.text()
+    let xml = await response.text()
+
+    // 预处理 XML：确保有正确的 XML 声明头
+    xml = preprocessDrawioXml(xml)
 
     // 配置：禁用工具栏，不依赖 viewer 的 zoom
     const data: Record<string, any> = {
